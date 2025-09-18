@@ -26,16 +26,12 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField]
     private float CompanionMovementForce = 2f;
     [SerializeField]
-    private float CompanionJumpForce = 12f;
-    [SerializeField]
     private float CompanionMaxSpeed = 8f;
 
     //Human movement vars
     private Rigidbody rb;
     [SerializeField]
     private float HumanMovementForce = 1f;
-    [SerializeField]
-    private float HumanJumpForce = 7f;
     [SerializeField]
     private float HumanMaxSpeed = 5f;
     private Vector3 forceDir = Vector3.zero;
@@ -174,11 +170,11 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             if (isHuman)
             {
-                forceDir += Vector3.up * HumanJumpForce;
+               // forceDir += Vector3.up * HumanJumpForce;
             }
             else if (!isHuman)
             {
-                forceDir += Vector3.up * CompanionJumpForce;
+               // forceDir += Vector3.up * CompanionJumpForce;
             }
             
             
@@ -211,13 +207,13 @@ public class ThirdPersonMovement : MonoBehaviour
     //player switch
     private void DoPlayerSwitch(InputAction.CallbackContext context)
     {
-        if (isHuman)
+        if (isHuman && CheckDistance())
         {
             companionCamera.SetActive(true);
 
             isHuman = false;
         }
-        else if (!isHuman)
+        else if (!isHuman && CheckDistance())
         {
             companionCamera.SetActive(false);
 
@@ -228,6 +224,28 @@ public class ThirdPersonMovement : MonoBehaviour
     }
 
 
+    private bool CheckDistance()
+    {
+        Ray RayLR = new Ray(this.transform.position + Vector3.left, Vector3.right);
+        Ray RayFB = new Ray(this.transform.position + Vector3.forward, Vector3.back);
+        if (Physics.Raycast(RayLR, out RaycastHit hit, 0.5f))
+        {
+            Debug.Log("SwitchRayHit");
+            return true;
+            
+        }
+        else if (Physics.Raycast(RayFB, out RaycastHit hitfb, 0.5f))
+        {
+            Debug.Log("SwitchRayHit");
+            return true;
+
+        }
+        else
+        {
+            Debug.Log("SwitchSetFalse");
+            return false;
+        }
+    }
 
     
 }

@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 1.620266, z: -6.925176}
+  m_FollowOffset: {x: 0, y: 0.2485401, z: -6.287125}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1295,7 +1295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644371195}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09252107, y: -0.0000000034086367, z: 3.1672914e-10, w: 0.99571073}
+  m_LocalRotation: {x: 0.09252102, y: -0.000000013741886, z: 0.0000000012768903, w: 0.9957108}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1697,7 +1697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 1.620266, z: -6.925176}
+  m_FollowOffset: {x: 0, y: 0.2485401, z: -6.287125}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1889,7 +1889,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137479402}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.047632042, y: -6.296517e-16, z: 1.4584966e-16, w: 0.99886495}
+  m_LocalRotation: {x: 0.047631957, y: -0.000000014807364, z: 7.0610523e-10, w: 0.99886495}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2526,7 +2526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 1.620266, z: -6.925176}
+  m_FollowOffset: {x: 0, y: 0.2485401, z: -6.287125}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -2650,7 +2650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854047669}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13870126, y: 0.000000029514265, z: -0.00000000413362, w: 0.9903343}
+  m_LocalRotation: {x: 0.13870123, y: 0.000000029643681, z: -0.0000000041517443, w: 0.99033433}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3228,10 +3228,8 @@ MonoBehaviour:
   companionCamera: {fileID: 240688963}
   companion: {fileID: 364055159}
   CompanionMovementForce: 2
-  CompanionJumpForce: 12
   CompanionMaxSpeed: 8
   HumanMovementForce: 1
-  HumanJumpForce: 7
   HumanMaxSpeed: 5
   playerCamera: {fileID: 1639383994}
   playerRotationSpeed: 7
