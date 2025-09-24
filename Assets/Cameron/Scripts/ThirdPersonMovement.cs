@@ -248,18 +248,12 @@ public class ThirdPersonMovement : MonoBehaviour
         {
            // Debug.Log($"Raycast hit: {hit.collider.gameObject.name} at {hit.point}");
 
-            if (hit.collider.gameObject.name == companion.gameObject.name && distance <= 5)
+            if (hit.collider.gameObject.name == companion.gameObject.name && distance <= 10)
             {
                 return true;
             }
             return false;
         }
-        else
-        {
-           // Debug.Log("raycast didnt hit anything between the objects");
-            return false;
-        }
-
         return false;
     }
 
