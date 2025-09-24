@@ -4,6 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// This script contains the movement connecting to the player input system in unity
+// as well as the switch between the 2 companions,
+// ground check, player rotation with the camera, 
+// and the ray cast that checks if anything is in the way between compainion and player
+// ^ which allows for player to switch bettween the two
+
+
 public class ThirdPersonMovement : MonoBehaviour
 {
     //companion camera
@@ -212,39 +219,48 @@ public class ThirdPersonMovement : MonoBehaviour
             companionCamera.SetActive(true);
 
             isHuman = false;
+
+            Debug.Log("Player Switch activated");
         }
         else if (!isHuman && CheckDistance())
         {
             companionCamera.SetActive(false);
 
             isHuman = true;
+
+            Debug.Log("Player Switch activated");
         }
 
-        Debug.Log("Player Switch activated");
+        
     }
 
 
     private bool CheckDistance()
     {
-        Ray RayLR = new Ray(this.transform.position + Vector3.left, Vector3.right);
-        Ray RayFB = new Ray(this.transform.position + Vector3.forward, Vector3.back);
-        if (Physics.Raycast(RayLR, out RaycastHit hit, 0.5f))
-        {
-            Debug.Log("SwitchRayHit");
-            return true;
-            
-        }
-        else if (Physics.Raycast(RayFB, out RaycastHit hitfb, 0.5f))
-        {
-            Debug.Log("SwitchRayHit");
-            return true;
+        Vector3 origin = this.transform.position;
+        Vector3 target = companion.transform.position;
+        
+        Vector3 direction = (target - origin).normalized;
+        float distance = Vector3.Distance(origin, target);
 
+        RaycastHit hit;
+        if (Physics.Raycast(origin, direction, out hit, distance))
+        {
+           // Debug.Log($"Raycast hit: {hit.collider.gameObject.name} at {hit.point}");
+
+            if (hit.collider.gameObject.name == companion.gameObject.name && distance <= 5)
+            {
+                return true;
+            }
+            return false;
         }
         else
         {
-            Debug.Log("SwitchSetFalse");
+           // Debug.Log("raycast didnt hit anything between the objects");
             return false;
         }
+
+        return false;
     }
 
     
