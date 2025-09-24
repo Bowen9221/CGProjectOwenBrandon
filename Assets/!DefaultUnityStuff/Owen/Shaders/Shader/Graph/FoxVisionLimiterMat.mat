@@ -39,8 +39,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _Feather: 2
-    - _IsFox: 0
-    - _VisionRadius: 5
+    - _IsFox: 1
+    - _VisionRadius: 8.09
     m_Colors:
-    - _FoxPos: {r: 4.4309816, g: 1.5938362, b: 1.677781, a: 0}
+    - _FoxPos: {r: 7.623025, g: 1.5938363, b: 3.5671875, a: 0}
   m_BuildTextureStacks: []

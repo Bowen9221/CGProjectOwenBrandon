@@ -1003,7 +1003,7 @@ MonoBehaviour:
   visionLimiter: {fileID: 2100000, guid: c92a6caf7f6c9ff4f93c613449eb1b6b, type: 2}
   fox: {fileID: 364055161}
   visionRadius: 5
-  feather: 1
+  feather: 100
   brain: {fileID: 1639383991}
   foxVCam: {fileID: 240688968}
   humanVCam: {fileID: 1635368295}
