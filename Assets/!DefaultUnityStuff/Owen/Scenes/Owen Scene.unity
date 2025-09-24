@@ -882,7 +882,7 @@ Transform:
   m_GameObject: {fileID: 364055159}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.66, y: 2.63, z: -9.721}
+  m_LocalPosition: {x: 0, y: 1.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -962,6 +962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 370700968}
+  - component: {fileID: 370700969}
   m_Layer: 0
   m_Name: Cameras
   m_TagString: Untagged
@@ -987,6 +988,25 @@ Transform:
   - {fileID: 240688964}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &370700969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370700967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a09069bc3eef446b88c00e51c06082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visionLimiter: {fileID: 2100000, guid: c92a6caf7f6c9ff4f93c613449eb1b6b, type: 2}
+  fox: {fileID: 364055161}
+  visionRadius: 5
+  feather: 1
+  brain: {fileID: 1639383991}
+  foxVCam: {fileID: 240688968}
+  humanVCam: {fileID: 1635368295}
 --- !u!1 &405337653
 GameObject:
   m_ObjectHideFlags: 3
@@ -2491,7 +2511,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.3024807, y: 0.88, z: 0.36160755}
-  m_LocalScale: {x: 5.7504, y: 1, z: 4.7361}
+  m_LocalScale: {x: 160.53479, y: 1, z: 44.059956}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
