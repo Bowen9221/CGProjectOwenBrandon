@@ -6,12 +6,15 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
 
-// This script contains the movement connecting to the player input system in unity
-// as well as the switch between the 2 companions,
-// ground check, player rotation with the camera, 
-// and the ray cast that checks if anything is in the way between compainion and player
-// ^ which allows for player to switch bettween the two
+/* This script contains the movement connecting to the player input system in unity
+ as well as the switch between the 2 companions,
+ ground check, player rotation with the camera, 
+ and the ray cast that checks if anything is in the way between compainion and player
+ ^ which allows for player to switch bettween the two
+ contains the vaulting system
+ and the prompt system in addition with the "PopUps" script
 
+*/
 
 public class ThirdPersonMovement : MonoBehaviour
 {
@@ -461,7 +464,7 @@ public class ThirdPersonMovement : MonoBehaviour
     }
 
     
-
+    //this is temp, code a interact prompt better
     private void OnTriggerStay(Collider other)
     {
         if (isHuman && other.CompareTag("vent"))
