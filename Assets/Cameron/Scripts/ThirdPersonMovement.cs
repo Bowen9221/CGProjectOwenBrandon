@@ -71,6 +71,7 @@ public class ThirdPersonMovement : MonoBehaviour
     //popUp variables
     [HideInInspector] public bool ableVault;
     [HideInInspector] public bool interactPropmt;
+    [HideInInspector] public bool canIntDia;
 
     [HideInInspector] public string ActiveController = "keyboard";
 
@@ -471,6 +472,11 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             interactPropmt = true;
         }
+
+        if (isHuman && other.CompareTag("dialouge"))
+        {
+            canIntDia = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -478,6 +484,11 @@ public class ThirdPersonMovement : MonoBehaviour
         if (interactPropmt)
         {
             interactPropmt = false;
+        }
+
+        if (canIntDia)
+        {
+            canIntDia = false;
         }
     }
 
