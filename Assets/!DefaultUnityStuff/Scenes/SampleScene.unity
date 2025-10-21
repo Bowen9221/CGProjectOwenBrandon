@@ -1348,6 +1348,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: diaTxt
+      value: 
+      objectReference: {fileID: 157230789}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 2119922165}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: npc_Text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5972,6 +5987,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: diaTxt
+      value: 
+      objectReference: {fileID: 157230789}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 2119922165}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: npc_Text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6531,6 +6561,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: diaTxt
+      value: 
+      objectReference: {fileID: 157230789}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 2119922165}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: npc_Text
+      value: Find your way through and there may be no return.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: secTxtDisplayed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15520,12 +15570,12 @@ PrefabInstance:
     - target: {fileID: 6601068289116159906, guid: 93b9e4357c00cdf48a99c57f2362aea1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.47
+      value: 59.85
       objectReference: {fileID: 0}
     - target: {fileID: 6601068289116159906, guid: 93b9e4357c00cdf48a99c57f2362aea1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.32
+      value: 2.19
       objectReference: {fileID: 0}
     - target: {fileID: 6601068289116159906, guid: 93b9e4357c00cdf48a99c57f2362aea1,
         type: 3}
@@ -15566,6 +15616,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: diaTxt
+      value: 
+      objectReference: {fileID: 157230789}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 2119922165}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: npc_Text
+      value: "I wouldn\u2019t recommend touching anything in here. Who knows where
+        you may go."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: secTxtDisplayed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17657,6 +17728,18 @@ PrefabInstance:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 2119922165}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: npc_Text
+      value: "Have you heard that rumour about the gateways that have been opening
+        to other realms? It\u2019s been reported that an animal was swooped out of
+        thin air last week. The cause is unknown\u2026."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670846953419863014, guid: 93b9e4357c00cdf48a99c57f2362aea1,
+        type: 3}
+      propertyPath: secTxtDisplayed
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
