@@ -13,6 +13,10 @@ public class Dialouge : MonoBehaviour
 
     public string npc_Text;
 
+    public float secTxtDisplayed;
+
+    public GameObject dialogue;
+
 
 
     private void Awake()
@@ -24,6 +28,7 @@ public class Dialouge : MonoBehaviour
     void Start()
     {
         playerMovementSc = FindAnyObjectByType<ThirdPersonMovement>();
+        dialogue.SetActive(false);
     }
 
     // Update is called once per frame
@@ -58,8 +63,18 @@ public class Dialouge : MonoBehaviour
 
         if (playerMovementSc.isHuman && playerActionsAsset.Player.Interact.IsPressed())
         {
-            playerMovementSc.canIntDia = false;
-            diaTxt.text = npc_Text;
+            StartCoroutine(displayText());
         }
+    }
+
+    IEnumerator displayText()
+    {
+        dialogue.SetActive(true);
+        playerMovementSc.canIntDia = false;
+        diaTxt.text = npc_Text;
+        yield return new WaitForSeconds(secTxtDisplayed);
+        playerMovementSc.canIntDia = true;
+        diaTxt.text = "";
+        dialogue.SetActive(false);
     }
 }

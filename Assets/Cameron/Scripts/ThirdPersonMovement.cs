@@ -468,7 +468,7 @@ public class ThirdPersonMovement : MonoBehaviour
     //this is temp, code a interact prompt better
     private void OnTriggerStay(Collider other)
     {
-        if (isHuman && other.CompareTag("vent"))
+        if (isHuman && other.CompareTag("vent") || other.CompareTag("dialouge"))
         {
             interactPropmt = true;
         }

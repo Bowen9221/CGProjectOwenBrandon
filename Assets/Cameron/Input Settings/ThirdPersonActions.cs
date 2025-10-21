@@ -71,6 +71,15 @@ public partial class @ThirdPersonActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""a0185556-df52-4a7b-8455-c12db4f469f4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -227,6 +236,28 @@ public partial class @ThirdPersonActions: IInputActionCollection2, IDisposable
                     ""action"": ""Vault"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5819ee87-1d49-4de0-a7bc-aa212a4bbaad"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b9dcd024-8ca0-43e7-aacd-3d65f3dcb575"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -240,6 +271,7 @@ public partial class @ThirdPersonActions: IInputActionCollection2, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_PlayerSwitch = m_Player.FindAction("PlayerSwitch", throwIfNotFound: true);
         m_Player_Vault = m_Player.FindAction("Vault", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -306,6 +338,7 @@ public partial class @ThirdPersonActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_PlayerSwitch;
     private readonly InputAction m_Player_Vault;
+    private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
         private @ThirdPersonActions m_Wrapper;
@@ -315,6 +348,7 @@ public partial class @ThirdPersonActions: IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @PlayerSwitch => m_Wrapper.m_Player_PlayerSwitch;
         public InputAction @Vault => m_Wrapper.m_Player_Vault;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -339,6 +373,9 @@ public partial class @ThirdPersonActions: IInputActionCollection2, IDisposable
             @Vault.started += instance.OnVault;
             @Vault.performed += instance.OnVault;
             @Vault.canceled += instance.OnVault;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -358,6 +395,9 @@ public partial class @ThirdPersonActions: IInputActionCollection2, IDisposable
             @Vault.started -= instance.OnVault;
             @Vault.performed -= instance.OnVault;
             @Vault.canceled -= instance.OnVault;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -382,5 +422,6 @@ public partial class @ThirdPersonActions: IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnPlayerSwitch(InputAction.CallbackContext context);
         void OnVault(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }
