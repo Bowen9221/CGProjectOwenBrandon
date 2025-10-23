@@ -15,10 +15,21 @@ using UnityEngine.InputSystem.XR;
 
 */
 
-public class ThirdPersonMovement : MonoBehaviour
+public class ThirdPersonMovement : MonoBehaviour, IDataPersistence
 {
     
-    
+    //Player Save
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+        companion.transform.position = data.companionPosition;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerPosition = this.transform.position;
+        data.companionPosition = companion.transform.position;
+    }
 
 
     [SerializeField]
