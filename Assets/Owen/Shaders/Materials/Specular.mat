@@ -27,7 +27,7 @@ Material:
     - _Texture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Offset: {x: 0, y: 0.25}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -47,7 +47,7 @@ Material:
     - _Shininess: 100
     m_Colors:
     - _Spec_Col: {r: 1, g: 1, b: 1, a: 0}
-    - _base_Col: {r: 0.02156335, g: 0.41509432, b: 0, a: 0}
+    - _base_Col: {r: 0.019757343, g: 0.4056604, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5016044660661593983
 MonoBehaviour:
